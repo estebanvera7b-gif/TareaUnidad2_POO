@@ -29,4 +29,5 @@ Sigue estos pasos para probar el proyecto en tu máquina local:
 ### 1. Clonar el repositorio
 Abre tu terminal o Git Bash y ejecuta:
 ```bash
-git clone [https://github.com/estebanvera7b-gif/TareaUnidad2_POO.git](https://github.com/estebanvera7b-gif/TareaUnidad2_POO.git)
+
+git clone [https://github.com/estebanvera7b-gif/TareaUnidad2_POO.git]
