@@ -1,19 +1,44 @@
 package poo;
-import uni1a.*;
+
+import uni1a.*; 
 
 public class PruebaAudioVisual {
-	public static void main(String[] args) {
-        System.out.println("Hello from Eclipse!");
 
-        // Crear instancias de las subclases
-        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[3];
-        contenidos[0] = new Pelicula("Avatar", 125, "Accion", "20th Century Studios");
-        contenidos[1] = new SerieDeTV("Game of Thrones", 60, "Fantasy", 8);
-        contenidos[2] = new Documental("Cosmos", 45, "Science", "Astronomy");
+    public static void main(String[] args) {
+        System.out.println("--- PRUEBA DE SISTEMA AUDIOVISUAL ---");
 
-        // Mostrar los detalles de cada contenido audiovisual
-        for (ContenidoAudiovisual contenido : contenidos) {
-            contenido.mostrarDetalles();
-        }
-    }
+       
+        Pelicula titanic = new Pelicula("Titanic", 195, "Romance", "20th Century Fox");
+        Actor leo = new Actor("Leonardo", "DiCaprio");
+        Actor kate = new Actor("Kate", "Winslet");
+        
+        titanic.agregarActor(leo);
+        titanic.agregarActor(kate);
+        
+        System.out.println(">> Probando Película:");
+        titanic.mostrarDetalles(); 
+        
+
+       
+        SerieDeTV breakingBad = new SerieDeTV("Breaking Bad", 50, "Crimen", 5);
+        Temporada t1 = new Temporada(1, 7); 
+        Temporada t2 = new Temporada(2, 13); 
+        
+        breakingBad.agregarTemporada(t1);
+        breakingBad.agregarTemporada(t2);
+        
+        System.out.println(">> Probando Serie de TV:");
+        breakingBad.mostrarDetalles(); 
+
+
+      
+        Documental cosmos = new Documental("Cosmos", 60, "Ciencia", "Astronomía");
+        Investigador carl = new Investigador("Carl", "Sagan", "Astrofísica"); 
+        
+        cosmos.setInvestigador(carl);
+        
+        System.out.println(">> Probando Documental:");
+        cosmos.mostrarDetalles(); 
+        
+     }
 }
